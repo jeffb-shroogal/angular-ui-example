@@ -1,0 +1,788 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Info - Introduction</title>
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<!-- Viewport minimum width to be 1024 -->
+<meta name="viewport" content="width=1024, maximum-scale=1.0">
+<!-- Twitter Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Open Sans Google Web Font -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<!-- jQuery UI -->
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+<!-- Scrollbar -->
+<link href="js/lib/scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+<!-- icheck -->
+<link href="js/lib/icheck/skins/shroogal/blue.css" rel="stylesheet" type="text/css">
+<!-- Custom styles for login -->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- Main wrap -->
+<div class="wrapper home">
+  <!-- Page content -->
+  <section class="container-fluid page-section">
+    <!-- Tabs -->
+    <div class="row">
+      <div class="col-xs-12">
+        <!-- Dynamic tabs -->
+        <div class="tabs" id="dynamicTabs">
+
+          <!-- About you -->
+          <div id="aboutYou" class="video-info">
+            <div class="tablist">
+              <ul class="list-inline">
+                <li class="active"><a href="#aboutYou_ItemA" data-toggle="tab">Item A</a></li>
+                <li><a href="#aboutYou_ItemB" data-toggle="tab">Item B</a></li>
+                <li><a href="#aboutYou_ItemC" data-toggle="tab">Item C</a></li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="aboutYou_ItemA">
+                <h2 class="tab-heading">About you</h2>
+                <div class="row myinfo-list">
+                  <div class="col-md-12 no-padding-left-right">
+                    <h5 class="section-hint">VIEW / EDIT</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" data-video="aboutYou_name" data-section="aboutYou"><span class="field">Name</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="name" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <label for="title" class="field-label"><span class="label-text">Title</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="title" value="Mr." class="radio-inline" checked><label>Mr.</label>
+                                <input type="radio" name="title" value="Mrs." class="radio-inline"><label>Mrs.</label>
+                                <input type="radio" name="title" value="Miss" class="radio-inline"><label>Miss</label>
+                                <input type="radio" name="title" value="Ms." class="radio-inline"><label>Ms.</label>
+                                <input type="radio" name="title" value="Dr." class="radio-inline"><label>Dr.</label>
+                                <input type="radio" name="title" value="Prof." class="radio-inline"><label>Prof.</label>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="firstName" class="field-label"><span class="label-text">First name</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="text" class="text-input" name="firstname" id="firstName">
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="middleName" class="field-label"><span class="label-text">Middle name</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="text" class="text-input" name="middlename" id="middleName">
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="lastName" class="field-label"><span class="label-text">Last name</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="text" class="text-input" name="lastname" id="lastName">
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#"><span class="field">Gender</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="gender" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <label for="gender" class="field-label"><span class="label-text">Select</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="gender" value="Male" class="radio-inline" checked><label>Male</label>
+                                <input type="radio" name="gender" value="Female" class="radio-inline"><label>Female</label>
+                                <input type="radio" name="gender" value="Other" class="radio-inline"><label>Other</label>
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#"><span class="field">Date of birth</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <div class="three-cols has-select">
+                                <label for="dateOfBirth" class="field-label"><span class="label-text">Select</span></label>
+                                <div class="form-fields clearfix">
+                                  <!-- Year selector -->
+                                  <div class="drop-down year-select" id="yearSelect">
+                                    <input name="birthyear" value="" type="hidden" class="drop-hidden-value">
+                                    <div class="drop-value" data-previous="year..." data-default="year...">year...</div>
+                                    <i class="drop-arrow"></i>
+                                    <div class="drop-content">
+                                      <div id="yearPicker" class="carousel slide year-picker" data-ride="carousel" data-interval="false">
+                                        <div class="carousel-inner" role="listbox">
+                                          <div class="item">
+                                            <ul class="list-inline year-list clearfix">
+                                              <li>1990</li>
+                                              <li>1991</li>
+                                              <li>1992</li>
+                                              <li>1993</li>
+                                              <li>1994</li>
+                                              <li>1995</li>
+                                              <li>1996</li>
+                                              <li>1997</li>
+                                              <li>1998</li>
+                                              <li>1999</li>
+                                            </ul>
+                                          </div>
+                                          <div class="item active">
+                                            <ul class="list-inline year-list clearfix">
+                                              <li>2000</li>
+                                              <li>2001</li>
+                                              <li>2002</li>
+                                              <li>2003</li>
+                                              <li>2004</li>
+                                              <li>2005</li>
+                                              <li>2006</li>
+                                              <li>2007</li>
+                                              <li>2008</li>
+                                              <li>2009</li>
+                                            </ul>
+                                          </div>
+                                          <div class="item">
+                                            <ul class="list-inline year-list clearfix">
+                                              <li>2010</li>
+                                              <li>2011</li>
+                                              <li>2012</li>
+                                              <li>2013</li>
+                                              <li>2014</li>
+                                              <li>2015</li>
+                                              <li>2016</li>
+                                              <li>2017</li>
+                                              <li>2018</li>
+                                              <li>2019</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <!-- Left and right controls -->
+                                        <a class="left carousel-control" href="#yearPicker" role="button" data-slide="prev">
+                                          <span class="arrow arrow-back">&lt;</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#yearPicker" role="button" data-slide="next">
+                                          <span class="arrow arrow-next">&gt;</span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- // Year selector -->
+                                </div>
+                              </div>
+                              <div class="three-cols has-select">
+                                <div class="form-fields clearfix">
+                                  <!-- Month selector -->
+                                  <div class="drop-down month-select" id="yearSelect">
+                                    <input name="birthmonth" value="" type="hidden" class="drop-hidden-value">
+                                    <div class="drop-value" data-previous="mth..." data-default="mth...">mth...</div>
+                                    <i class="drop-arrow"></i>
+                                    <div class="drop-content">
+                                      <div id="monthPicker" class="month-picker">
+                                        <ul class="list-inline month-list clearfix">
+                                          <li>Jan</li>
+                                          <li>Feb</li>
+                                          <li>Mar</li>
+                                          <li>Apr</li>
+                                          <li>May</li>
+                                          <li>Jun</li>
+                                          <li>Jul</li>
+                                          <li>Aug</li>
+                                          <li>Sep</li>
+                                          <li>Oct</li>
+                                          <li>Nov</li>
+                                          <li>Dec</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- // Month selector -->
+                                </div>
+                              </div>
+                              <div class="three-cols has-select">
+                                <div class="form-fields clearfix">
+                                  <!-- Day selector -->
+                                  <div class="drop-down day-select" id="daySelect">
+                                    <input name="birthday" value="" type="hidden" class="drop-hidden-value">
+                                    <div class="drop-value" data-previous="day..." data-default="day...">day...</div>
+                                    <i class="drop-arrow"></i>
+                                    <div class="drop-content">
+                                      <div id="dayPicker" class="day-picker">
+                                        <ul class="list-inline day-list clearfix">
+                                          <li>1</li>
+                                          <li>2</li>
+                                          <li>3</li>
+                                          <li>4</li>
+                                          <li>5</li>
+                                          <li>6</li>
+                                          <li>7</li>
+                                          <li>8</li>
+                                          <li>9</li>
+                                          <li>10</li>
+                                          <li>11</li>
+                                          <li>12</li>
+                                          <li>13</li>
+                                          <li>14</li>
+                                          <li>15</li>
+                                          <li>16</li>
+                                          <li>17</li>
+                                          <li>18</li>
+                                          <li>19</li>
+                                          <li>20</li>
+                                          <li>21</li>
+                                          <li>22</li>
+                                          <li>23</li>
+                                          <li>24</li>
+                                          <li>25</li>
+                                          <li>26</li>
+                                          <li>27</li>
+                                          <li>28</li>
+                                          <li>29</li>
+                                          <li>30</li>
+                                          <li>31</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- // Day selector -->
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#"><span class="field">Place of birth</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="placeOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <label for="birthCountry" class="field-label"><span class="label-text">Country of birth</span></label>
+                              <div class="form-fields clearfix">
+                                <select name="birthcountry" id="birthCountry" class="wide" required>
+                                  <option value="0" disabled selected>Select country...</option>
+                                  <optgroup label="">
+                                    <option value="Afghanistan" title="Afghanistan">Afghanistan</option>
+                                    <option value="Åland Islands" title="Åland Islands">Åland Islands</option>
+                                    <option value="Albania" title="Albania">Albania</option>
+                                    <option value="Algeria" title="Algeria">Algeria</option>
+                                    <option value="American Samoa" title="American Samoa">American Samoa</option>
+                                    <option value="Andorra" title="Andorra">Andorra</option>
+                                    <option value="Angola" title="Angola">Angola</option>
+                                    <option value="Anguilla" title="Anguilla">Anguilla</option>
+                                    <option value="Antarctica" title="Antarctica">Antarctica</option>
+                                    <option value="Antigua and Barbuda" title="Antigua and Barbuda">Antigua and Barbuda</option>
+                                    <option value="Argentina" title="Argentina">Argentina</option>
+                                    <option value="Armenia" title="Armenia">Armenia</option>
+                                    <option value="Aruba" title="Aruba">Aruba</option>
+                                    <option value="Australia" title="Australia">Australia</option>
+                                    <option value="Austria" title="Austria">Austria</option>
+                                    <option value="Azerbaijan" title="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas" title="Bahamas">Bahamas</option>
+                                    <option value="Bahrain" title="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh" title="Bangladesh">Bangladesh</option>
+                                    <option value="Barbados" title="Barbados">Barbados</option>
+                                    <option value="Belarus" title="Belarus">Belarus</option>
+                                    <option value="Belgium" title="Belgium">Belgium</option>
+                                    <option value="Belize" title="Belize">Belize</option>
+                                    <option value="Benin" title="Benin">Benin</option>
+                                    <option value="Bermuda" title="Bermuda">Bermuda</option>
+                                    <option value="Bhutan" title="Bhutan">Bhutan</option>
+                                    <option value="Bolivia, Plurinational State of" title="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+                                    <option value="Bonaire, Sint Eustatius and Saba" title="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+                                    <option value="Bosnia and Herzegovina" title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                    <option value="Botswana" title="Botswana">Botswana</option>
+                                    <option value="Bouvet Island" title="Bouvet Island">Bouvet Island</option>
+                                    <option value="Brazil" title="Brazil">Brazil</option>
+                                    <option value="British Indian Ocean Territory" title="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                    <option value="Brunei Darussalam" title="Brunei Darussalam">Brunei Darussalam</option>
+                                    <option value="Bulgaria" title="Bulgaria">Bulgaria</option>
+                                    <option value="Burkina Faso" title="Burkina Faso">Burkina Faso</option>
+                                    <option value="Burundi" title="Burundi">Burundi</option>
+                                    <option value="Cambodia" title="Cambodia">Cambodia</option>
+                                    <option value="Cameroon" title="Cameroon">Cameroon</option>
+                                    <option value="Canada" title="Canada">Canada</option>
+                                    <option value="Cape Verde" title="Cape Verde">Cape Verde</option>
+                                    <option value="Cayman Islands" title="Cayman Islands">Cayman Islands</option>
+                                    <option value="Central African Republic" title="Central African Republic">Central African Republic</option>
+                                    <option value="Chad" title="Chad">Chad</option>
+                                    <option value="Chile" title="Chile">Chile</option>
+                                    <option value="China" title="China">China</option>
+                                    <option value="Christmas Island" title="Christmas Island">Christmas Island</option>
+                                    <option value="Cocos (Keeling) Islands" title="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                    <option value="Colombia" title="Colombia">Colombia</option>
+                                    <option value="Comoros" title="Comoros">Comoros</option>
+                                    <option value="Congo" title="Congo">Congo</option>
+                                    <option value="Congo, the Democratic Republic of the" title="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+                                    <option value="Cook Islands" title="Cook Islands">Cook Islands</option>
+                                    <option value="Costa Rica" title="Costa Rica">Costa Rica</option>
+                                    <option value="Côte d'Ivoire" title="Côte d'Ivoire">Côte d'Ivoire</option>
+                                    <option value="Croatia" title="Croatia">Croatia</option>
+                                    <option value="Cuba" title="Cuba">Cuba</option>
+                                    <option value="Curaçao" title="Curaçao">Curaçao</option>
+                                    <option value="Cyprus" title="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic" title="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark" title="Denmark">Denmark</option>
+                                    <option value="Djibouti" title="Djibouti">Djibouti</option>
+                                    <option value="Dominica" title="Dominica">Dominica</option>
+                                    <option value="Dominican Republic" title="Dominican Republic">Dominican Republic</option>
+                                    <option value="Ecuador" title="Ecuador">Ecuador</option>
+                                    <option value="Egypt" title="Egypt">Egypt</option>
+                                    <option value="El Salvador" title="El Salvador">El Salvador</option>
+                                    <option value="Equatorial Guinea" title="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option value="Eritrea" title="Eritrea">Eritrea</option>
+                                    <option value="Estonia" title="Estonia">Estonia</option>
+                                    <option value="Ethiopia" title="Ethiopia">Ethiopia</option>
+                                    <option value="Falkland Islands (Malvinas)" title="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                    <option value="Faroe Islands" title="Faroe Islands">Faroe Islands</option>
+                                    <option value="Fiji" title="Fiji">Fiji</option>
+                                    <option value="Finland" title="Finland">Finland</option>
+                                    <option value="France" title="France">France</option>
+                                    <option value="French Guiana" title="French Guiana">French Guiana</option>
+                                    <option value="French Polynesia" title="French Polynesia">French Polynesia</option>
+                                    <option value="French Southern Territories" title="French Southern Territories">French Southern Territories</option>
+                                    <option value="Gabon" title="Gabon">Gabon</option>
+                                    <option value="Gambia" title="Gambia">Gambia</option>
+                                    <option value="Georgia" title="Georgia">Georgia</option>
+                                    <option value="Germany" title="Germany">Germany</option>
+                                    <option value="Ghana" title="Ghana">Ghana</option>
+                                    <option value="Gibraltar" title="Gibraltar">Gibraltar</option>
+                                    <option value="Greece" title="Greece">Greece</option>
+                                    <option value="Greenland" title="Greenland">Greenland</option>
+                                    <option value="Grenada" title="Grenada">Grenada</option>
+                                    <option value="Guadeloupe" title="Guadeloupe">Guadeloupe</option>
+                                    <option value="Guam" title="Guam">Guam</option>
+                                    <option value="Guatemala" title="Guatemala">Guatemala</option>
+                                    <option value="Guernsey" title="Guernsey">Guernsey</option>
+                                    <option value="Guinea" title="Guinea">Guinea</option>
+                                    <option value="Guinea-Bissau" title="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option value="Guyana" title="Guyana">Guyana</option>
+                                    <option value="Haiti" title="Haiti">Haiti</option>
+                                    <option value="Heard Island and McDonald Islands" title="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                                    <option value="Holy See (Vatican City State)" title="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                    <option value="Honduras" title="Honduras">Honduras</option>
+                                    <option value="Hong Kong" title="Hong Kong">Hong Kong</option>
+                                    <option value="Hungary" title="Hungary">Hungary</option>
+                                    <option value="Iceland" title="Iceland">Iceland</option>
+                                    <option value="India" title="India">India</option>
+                                    <option value="Indonesia" title="Indonesia">Indonesia</option>
+                                    <option value="Iran, Islamic Republic of" title="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                    <option value="Iraq" title="Iraq">Iraq</option>
+                                    <option value="Ireland" title="Ireland">Ireland</option>
+                                    <option value="Isle of Man" title="Isle of Man">Isle of Man</option>
+                                    <option value="Israel" title="Israel">Israel</option>
+                                    <option value="Italy" title="Italy">Italy</option>
+                                    <option value="Jamaica" title="Jamaica">Jamaica</option>
+                                    <option value="Japan" title="Japan">Japan</option>
+                                    <option value="Jersey" title="Jersey">Jersey</option>
+                                    <option value="Jordan" title="Jordan">Jordan</option>
+                                    <option value="Kazakhstan" title="Kazakhstan">Kazakhstan</option>
+                                    <option value="Kenya" title="Kenya">Kenya</option>
+                                    <option value="Kiribati" title="Kiribati">Kiribati</option>
+                                    <option value="Korea, Democratic People's Republic of" title="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                    <option value="Korea, Republic of" title="Korea, Republic of">Korea, Republic of</option>
+                                    <option value="Kuwait" title="Kuwait">Kuwait</option>
+                                    <option value="Kyrgyzstan" title="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Lao People's Democratic Republic" title="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                    <option value="Latvia" title="Latvia">Latvia</option>
+                                    <option value="Lebanon" title="Lebanon">Lebanon</option>
+                                    <option value="Lesotho" title="Lesotho">Lesotho</option>
+                                    <option value="Liberia" title="Liberia">Liberia</option>
+                                    <option value="Libya" title="Libya">Libya</option>
+                                    <option value="Liechtenstein" title="Liechtenstein">Liechtenstein</option>
+                                    <option value="Lithuania" title="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg" title="Luxembourg">Luxembourg</option>
+                                    <option value="Macao" title="Macao">Macao</option>
+                                    <option value="Macedonia, the former Yugoslav Republic of" title="Macedonia, the former Yugoslav Republic of">Macedonia, the former Yugoslav Republic of</option>
+                                    <option value="Madagascar" title="Madagascar">Madagascar</option>
+                                    <option value="Malawi" title="Malawi">Malawi</option>
+                                    <option value="Malaysia" title="Malaysia">Malaysia</option>
+                                    <option value="Maldives" title="Maldives">Maldives</option>
+                                    <option value="Mali" title="Mali">Mali</option>
+                                    <option value="Malta" title="Malta">Malta</option>
+                                    <option value="Marshall Islands" title="Marshall Islands">Marshall Islands</option>
+                                    <option value="Martinique" title="Martinique">Martinique</option>
+                                    <option value="Mauritania" title="Mauritania">Mauritania</option>
+                                    <option value="Mauritius" title="Mauritius">Mauritius</option>
+                                    <option value="Mayotte" title="Mayotte">Mayotte</option>
+                                    <option value="Mexico" title="Mexico">Mexico</option>
+                                    <option value="Micronesia, Federated States of" title="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                    <option value="Moldova, Republic of" title="Moldova, Republic of">Moldova, Republic of</option>
+                                    <option value="Monaco" title="Monaco">Monaco</option>
+                                    <option value="Mongolia" title="Mongolia">Mongolia</option>
+                                    <option value="Montenegro" title="Montenegro">Montenegro</option>
+                                    <option value="Montserrat" title="Montserrat">Montserrat</option>
+                                    <option value="Morocco" title="Morocco">Morocco</option>
+                                    <option value="Mozambique" title="Mozambique">Mozambique</option>
+                                    <option value="Myanmar" title="Myanmar">Myanmar</option>
+                                    <option value="Namibia" title="Namibia">Namibia</option>
+                                    <option value="Nauru" title="Nauru">Nauru</option>
+                                    <option value="Nepal" title="Nepal">Nepal</option>
+                                    <option value="Netherlands" title="Netherlands">Netherlands</option>
+                                    <option value="New Caledonia" title="New Caledonia">New Caledonia</option>
+                                    <option value="New Zealand" title="New Zealand">New Zealand</option>
+                                    <option value="Nicaragua" title="Nicaragua">Nicaragua</option>
+                                    <option value="Niger" title="Niger">Niger</option>
+                                    <option value="Nigeria" title="Nigeria">Nigeria</option>
+                                    <option value="Niue" title="Niue">Niue</option>
+                                    <option value="Norfolk Island" title="Norfolk Island">Norfolk Island</option>
+                                    <option value="Northern Mariana Islands" title="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Norway" title="Norway">Norway</option>
+                                    <option value="Oman" title="Oman">Oman</option>
+                                    <option value="Pakistan" title="Pakistan">Pakistan</option>
+                                    <option value="Palau" title="Palau">Palau</option>
+                                    <option value="Palestinian Territory, Occupied" title="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                                    <option value="Panama" title="Panama">Panama</option>
+                                    <option value="Papua New Guinea" title="Papua New Guinea">Papua New Guinea</option>
+                                    <option value="Paraguay" title="Paraguay">Paraguay</option>
+                                    <option value="Peru" title="Peru">Peru</option>
+                                    <option value="Philippines" title="Philippines">Philippines</option>
+                                    <option value="Pitcairn" title="Pitcairn">Pitcairn</option>
+                                    <option value="Poland" title="Poland">Poland</option>
+                                    <option value="Portugal" title="Portugal">Portugal</option>
+                                    <option value="Puerto Rico" title="Puerto Rico">Puerto Rico</option>
+                                    <option value="Qatar" title="Qatar">Qatar</option>
+                                    <option value="Réunion" title="Réunion">Réunion</option>
+                                    <option value="Romania" title="Romania">Romania</option>
+                                    <option value="Russian Federation" title="Russian Federation">Russian Federation</option>
+                                    <option value="Rwanda" title="Rwanda">Rwanda</option>
+                                    <option value="Saint Barthélemy" title="Saint Barthélemy">Saint Barthélemy</option>
+                                    <option value="Saint Helena, Ascension and Tristan da Cunha" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+                                    <option value="Saint Kitts and Nevis" title="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                    <option value="Saint Lucia" title="Saint Lucia">Saint Lucia</option>
+                                    <option value="Saint Martin (French part)" title="Saint Martin (French part)">Saint Martin (French part)</option>
+                                    <option value="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                    <option value="Saint Vincent and the Grenadines" title="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                    <option value="Samoa" title="Samoa">Samoa</option>
+                                    <option value="San Marino" title="San Marino">San Marino</option>
+                                    <option value="Sao Tome and Principe" title="Sao Tome and Principe">Sao Tome and Principe</option>
+                                    <option value="Saudi Arabia" title="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="Senegal" title="Senegal">Senegal</option>
+                                    <option value="Serbia" title="Serbia">Serbia</option>
+                                    <option value="Seychelles" title="Seychelles">Seychelles</option>
+                                    <option value="Sierra Leone" title="Sierra Leone">Sierra Leone</option>
+                                    <option value="Singapore" title="Singapore">Singapore</option>
+                                    <option value="Sint Maarten (Dutch part)" title="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+                                    <option value="Slovakia" title="Slovakia">Slovakia</option>
+                                    <option value="Slovenia" title="Slovenia">Slovenia</option>
+                                    <option value="Solomon Islands" title="Solomon Islands">Solomon Islands</option>
+                                    <option value="Somalia" title="Somalia">Somalia</option>
+                                    <option value="South Africa" title="South Africa">South Africa</option>
+                                    <option value="South Georgia and the South Sandwich Islands" title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                                    <option value="South Sudan" title="South Sudan">South Sudan</option>
+                                    <option value="Spain" title="Spain">Spain</option>
+                                    <option value="Sri Lanka" title="Sri Lanka">Sri Lanka</option>
+                                    <option value="Sudan" title="Sudan">Sudan</option>
+                                    <option value="Suriname" title="Suriname">Suriname</option>
+                                    <option value="Svalbard and Jan Mayen" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                    <option value="Swaziland" title="Swaziland">Swaziland</option>
+                                    <option value="Sweden" title="Sweden">Sweden</option>
+                                    <option value="Switzerland" title="Switzerland">Switzerland</option>
+                                    <option value="Syrian Arab Republic" title="Syrian Arab Republic">Syrian Arab Republic</option>
+                                    <option value="Taiwan, Province of China" title="Taiwan, Province of China">Taiwan, Province of China</option>
+                                    <option value="Tajikistan" title="Tajikistan">Tajikistan</option>
+                                    <option value="Tanzania, United Republic of" title="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                    <option value="Thailand" title="Thailand">Thailand</option>
+                                    <option value="Timor-Leste" title="Timor-Leste">Timor-Leste</option>
+                                    <option value="Togo" title="Togo">Togo</option>
+                                    <option value="Tokelau" title="Tokelau">Tokelau</option>
+                                    <option value="Tonga" title="Tonga">Tonga</option>
+                                    <option value="Trinidad and Tobago" title="Trinidad and Tobago">Trinidad and Tobago</option>
+                                    <option value="Tunisia" title="Tunisia">Tunisia</option>
+                                    <option value="Turkey" title="Turkey">Turkey</option>
+                                    <option value="Turkmenistan" title="Turkmenistan">Turkmenistan</option>
+                                    <option value="Turks and Caicos Islands" title="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                    <option value="Tuvalu" title="Tuvalu">Tuvalu</option>
+                                    <option value="Uganda" title="Uganda">Uganda</option>
+                                    <option value="Ukraine" title="Ukraine">Ukraine</option>
+                                    <option value="United Arab Emirates" title="United Arab Emirates">United Arab Emirates</option>
+                                    <option value="United Kingdom" title="United Kingdom">United Kingdom</option>
+                                    <option value="United States" title="United States">United States</option>
+                                    <option value="United States Minor Outlying Islands" title="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                    <option value="Uruguay" title="Uruguay">Uruguay</option>
+                                    <option value="Uzbekistan" title="Uzbekistan">Uzbekistan</option>
+                                    <option value="Vanuatu" title="Vanuatu">Vanuatu</option>
+                                    <option value="Venezuela, Bolivarian Republic of" title="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+                                    <option value="Viet Nam" title="Viet Nam">Viet Nam</option>
+                                    <option value="Virgin Islands, British" title="Virgin Islands, British">Virgin Islands, British</option>
+                                    <option value="Virgin Islands, U.S." title="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                    <option value="Wallis and Futuna" title="Wallis and Futuna">Wallis and Futuna</option>
+                                    <option value="Western Sahara" title="Western Sahara">Western Sahara</option>
+                                    <option value="Yemen" title="Yemen">Yemen</option>
+                                    <option value="Zambia" title="Zambia">Zambia</option>
+                                    <option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="placeOfBirth" class="field-label"><span class="label-text">State of birth</span></label>
+                              <div class="form-fields clearfix">
+                                <select name="birthstate" id="birthState" class="wide" required>
+                                  <option value="0" disabled selected>Select state...</option>
+                                  <optgroup label="UNITED STATES">
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                  </optgroup>
+                                  <optgroup label="CANADA">
+                                    <option value="Alberta">Alberta</option>
+                                    <option value="British Columbia">British Columbia</option>
+                                    <option value="Manitoba">Manitoba</option>
+                                    <option value="New Brunswick">New Brunswick</option>
+                                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                    <option value="Northwest Territories">Northwest Territories</option>
+                                    <option value="Nova Scotia">Nova Scotia</option>
+                                    <option value="Nunavut">Nunavut</option>
+                                    <option value="Ontario">Ontario</option>
+                                    <option value="Prince Edward Island">Prince Edward Island</option>
+                                    <option value="Quebec">Quebec</option>
+                                    <option value="Saskatchewan">Saskatchewan</option>
+                                    <option value="Yukon Territory">Yukon Territory</option>
+                                  </optgroup>
+                                  <optgroup label="AUSTRALIA">
+                                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+                                    <option value="New South Wales">New South Wales</option>
+                                    <option value="Northern Territory">Northern Territory</option>
+                                    <option value="Queensland">Queensland</option>
+                                    <option value="South Australia">South Australia</option>
+                                    <option value="Tasmania">Tasmania</option>
+                                    <option value="Victoria">Victoria</option>
+                                    <option value="Western Australia">Western Australia</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#"><span class="field">Permanent disability or illness</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="disabilityIllness" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <label for="applicable" class="field-label"><span class="label-text">Applicable?</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="applicable" value="Yes" class="radio-inline" checked><label>Yes</label>
+                                <input type="radio" name="applicable" value="No" class="radio-inline"><label>No</label>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="condition" class="field-label"><span class="label-text">Condition</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="text" class="text-input wide" name="condition" id="condition" required>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="supportRequired" class="field-label"><span class="label-text">Support<br>required?</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="supportrequired" value="Yes" class="radio-inline" checked><label>Yes</label>
+                                <input type="radio" name="supportrequired" value="No" class="radio-inline"><label>No</label>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <div class="three-cols">
+                                <label for="howOften" class="field-label"><span class="label-text">How often?</span></label>
+                                <div class="form-fields clearfix">
+                                  <input type="number" class="text-input short" name="howoften" id="howOften" pattern="[0-9]*" min="0" step="0.5" required>
+                                </div>
+                              </div>
+                              <div class="three-cols middle-col no-label">
+                                <div class="form-fields clearfix">
+                                  <input type="radio" name="oftentime" value="Hours" class="radio-inline" checked><label>Hours</label>
+                                  <input type="radio" name="oftentime" value="Days" class="radio-inline"><label>Days</label>
+                                </div>
+                              </div>
+                              <div class="three-cols last-col no-label">
+                                <div class="form-fields clearfix">
+                                  <input type="radio" name="oftendays" value="Week" class="radio-inline"><label>Week</label>
+                                  <input type="radio" name="oftendays" value="Fortnight" class="radio-inline" checked><label>Fortnight</label>
+                                  <input type="radio" name="oftendays" value="Month" class="radio-inline"><label>Month</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <div class="three-cols">
+                                <label for="cost" class="field-label"><span class="label-text">Cost ($)</span></label>
+                                <div class="form-fields clearfix">
+                                  <input type="number" class="text-input short" name="cost" id="cost" pattern="[0-9]*" min="0" step="0.50" required>
+                                </div>
+                              </div>
+                              <div class="three-cols middle-col has-label">
+                                <label for="costPer" class="field-label short"><span class="label-text">per</span></label>
+                                <div class="form-fields clearfix">
+                                  <input type="radio" name="costper" value="Hour" class="radio-inline" checked><label>Hour</label>
+                                  <input type="radio" name="costper" value="Day" class="radio-inline"><label>Day</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="supportProgram" class="field-label"><span class="label-text">Support Program</span></label>
+                              <div class="form-fields clearfix">
+                                <select name="supportprogram" id="supportProgram">
+                                  <option value="0" disabled selected>Select support program...</option>
+                                  <optgroup label="&nbsp;">
+                                    <option value="1">NDIS</option>
+                                    <option value="2">Disability Support Pension</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#"><span class="field">Safeguards</span> <span class="status">incomplete</span> <i class="arrow arrow-next trigger-form-expand">&gt;</i></a>
+                        <div class="form-content">
+                          <form name="" id="safeguards" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+                            <input type="hidden" name="filled" value="0">
+                            <div class="form-row clearfix">
+                              <label for="impaired-vision" class="field-label"><span class="label-text">Do you have<br>impaired vision?</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="impairedvision" value="Yes" class="radio-inline" checked><label>Yes</label>
+                                <input type="radio" name="impairedvision" value="No" class="radio-inline"><label>No</label>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="impaired-hearing" class="field-label"><span class="label-text">Is your hearing<br>impaired?</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="impairedhearing" value="Yes" class="radio-inline" checked><label>Yes</label>
+                                <input type="radio" name="impairedhearing" value="No" class="radio-inline"><label>No</label>
+                              </div>
+                            </div>
+                            <div class="form-row clearfix">
+                              <label for="need-assistance" class="field-label"><span class="label-text">Do you need<br>assistance?</span></label>
+                              <div class="form-fields clearfix">
+                                <input type="radio" name="needassistance" value="Yes" class="radio-inline" checked><label>Yes</label>
+                                <input type="radio" name="needassistance" value="No" class="radio-inline"><label>No</label>
+                              </div>
+                            </div>
+                            <div class="form-row text-right">
+                              <button type="submit" class="update-button button">Close / Update</button>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li class="form-final">
+                        <div class="form-row text-right">
+                          <button type="button" class="exit-button button">Exit</button>
+                          <button type="button" class="continue-button button trigger-next-video" data-video="contactDetails_completing_this_section" data-section="contactDetails">Continue</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="aboutYou_ItemB">
+                <h2 class="tab-heading">Item B</h2>
+                <p>Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here..Item B content goes here....</p>
+                <p>Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here..Item B content goes here....</p>
+                <p>Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here..Item B content goes here....</p>
+                <p>Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here..Item B content goes here....</p>
+                <p>Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here...Item B content goes here..Item B content goes here....</p>
+              </div>
+              <div class="tab-pane" id="aboutYou_ItemC">
+                <h2 class="tab-heading">Item C</h2>
+                <p>Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...</p>
+                <p>Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...</p>
+                <p>Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...</p>
+                <p>Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...</p>
+                <p>Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...Item C content goes here...</p>
+              </div>
+            </div>
+          </div>
+          <!-- // About you -->
+
+        </div>
+        <!-- // Dynamic tabs -->
+      </div>
+    </div>
+    <!-- // Tabs -->
+  </section>
+  <!-- // Page content -->
+</div>
+<!-- // Main wrap -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Twitter Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Scrollbar -->
+<script src="js/lib/scrollbar/jquery.scrollbar.min.js"></script>
+<!-- icheck -->
+<script src="js/lib/icheck/icheck.min.js"></script>
+<script src="js/lib/scrollbar/jquery.scrollbar.min.js"></script>
+<!-- Custom JavaScript for login -->
+<script src="js/app.js"></script>
+</body>
+</html>
