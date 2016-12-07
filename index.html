@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>My Info - Introduction</title>
+  <meta name="viewport" content="width=1024, maximum-scale=1.0">
+  <!-- Twitter Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Open Sans Google Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/lib/angular-route.min.js"></script>
+  <script src="js/lib/angular-animate.min.js"></script>
+  <script src="js/lib/ui-bootstrap-tpls-2.2.0.min.js"></script>
+  <script src="js/app/app.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- Main wrap -->
+  <div class="wrapper home" ng-controller="uidemo">
+    <!-- Page content -->
+    <section class="container-fluid page-section">
+      <ng-include src="'partials/uidemo.html'"></ng-include>
+    </section>
+    <!-- // Page content -->
+  </div>
+  <!-- // Main wrap -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <!-- Twitter Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
