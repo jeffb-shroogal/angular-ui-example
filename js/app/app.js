@@ -3,6 +3,10 @@ var myApp = angular.module('myApp', ['ngRoute','ngAnimate']);
 
 myApp.controller('uidemo', ['$scope', function($scope ) {
   $scope.gender = 'female';
+  $scope.secondOptions = ['Mr.','Mrs.','Miss.','Ms.','Dr.','Prof.'];
+  $scope.doChange = function() {
+    $scope.secondOptions = ['Yes','No'];
+  }
 }]);
 
 
@@ -28,10 +32,7 @@ myApp.directive('radios',[function(){
         }
 
         ngModel.$formatters.push(function(value){
-          if(value == undefined && scope.options != undefined) {
-            scope.check(scope.options[0]);
-          }
-          else {
+          if(value != undefined) {
             scope.check(value);
           }
           return value;

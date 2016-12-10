@@ -17,11 +17,14 @@
 <div class="form-row clearfix">
   <label for="gender" class="field-label"><span class="label-text">Select</span></label>
   <div class="form-fields clearfix">
-    <radios  options="['Mr.','Mrs.','Miss.','Ms.','Dr.','Prof.']" ng-model="title">
+    <radios options="secondOptions" ng-model="title">
     </radios>
   </div>
   <div class="alert alert-info">
     <strong>Info!</strong> title is not initialized and take the first option by default
     scope variable gender : {{title}}
+  </div>
+  <div>
+    <button ng-click="doChange()"> change options</button>
   </div>
 </div>
