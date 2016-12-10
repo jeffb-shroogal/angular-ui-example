@@ -1,5 +1,27 @@
 <p>Please put the components in this HTML page</p>
+<p> ver 1.0.0.0</p>
 
-<div>
-{{test}}
+<!-- custom directive radio gender -->
+<div class="form-row clearfix">
+  <label for="gender" class="field-label"><span class="label-text">Select</span></label>
+  <div class="form-fields clearfix">
+    <radios options="['male','female','other']" ng-model="gender">
+    </radios>
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> gender is initialized as female , scope variable gender : {{gender}}
+  </div>
+</div>
+
+<!-- custom directive radio title -->
+<div class="form-row clearfix">
+  <label for="gender" class="field-label"><span class="label-text">Select</span></label>
+  <div class="form-fields clearfix">
+    <radios  options="['Mr.','Mrs.','Miss.','Ms.','Dr.','Prof.']" ng-model="title">
+    </radios>
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> title is not initialized and take the first option by default
+    scope variable gender : {{title}}
+  </div>
 </div>

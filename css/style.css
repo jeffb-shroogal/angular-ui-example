@@ -12,6 +12,25 @@ input[type="number"],
 .ui-widget {
 	font-family: 'Open Sans', sans-serif;
 }
+input[type="radio"] {
+  left: -999em;
+  position: absolute;
+}
+.radio-btn {
+	float: left;
+	margin-right: -1px;
+	width: 110px;
+	height: 43px;
+	background: #FFF;
+	border: 1px solid #00adee;
+	text-transform: capitalize;
+	color: #00adee;
+}
+button.radio-btn:focus, button.radio-btn.active{
+	outline: none;
+	background: #00adee;
+	color: #FFF;
+}
 a,
 a:hover,
 a:active,
