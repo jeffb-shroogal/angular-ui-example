@@ -123,15 +123,27 @@ myApp.directive('datePicker',[function(){
       scope.setMonth = function(month) {
         scope.selectedMonth = month;
         scope.droppedMonth = false;
+        updateDays();
       }
 
 
 
     // ************************** day ****************************
-      //initialize days
-      for(var i=1 ; i<=31; i++) {
-        scope.days.push(i);
+      function updateDays() {
+          daysInMonth = 31;
+          if (scope.selectedMonth == "Feb") {
+              daysInMonth = 28;
+          } else if (["Sep", "Apr", "Jun", "Nov"].indexOf(scope.selectedMonth) > -1) {
+              daysInMonth = 30;
+          }
+          scope.days = [];
+          for (var i = 1; i <= daysInMonth; i++) {
+              scope.days.push(i);
+          }
       }
+
+      //initialize days
+      updateDays();
 
       //set month
       scope.setDay = function(day) {
