@@ -31,6 +31,14 @@ button.radio-btn:focus, button.radio-btn.active{
 	background: #00adee;
 	color: #FFF;
 }
+.year-picker {
+	width: 70px;
+	height: 40px;
+}
+button.carousel-control {
+	border: none;
+	outline: none;
+}
 a,
 a:hover,
 a:active,

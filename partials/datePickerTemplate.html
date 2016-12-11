@@ -1,0 +1,84 @@
+<div class="form-row clearfix">
+  <div class="three-cols has-select">
+    <label class="field-label"><span class="label-text">Select</span></label>
+    <div class="form-fields clearfix">
+      <div class="drop-down"  ng-class="{dropped:droppedYear}">
+        <div ng-click="droppedYear = !droppedYear">
+          <div class="drop-value" ng-show="droppedYear">
+            select
+          </div>
+          <div class="drop-value" ng-show="!droppedYear">
+            {{ selectedYear || 'year...'}}
+          </div>
+          <i class="drop-arrow"></i>
+        </div>
+        <div class="drop-content">
+          <div class="carousel slide year-picker" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="item" ng-class="{active:indecator==index}"
+                    ng-repeat="segement in years" ng-init="indecator = $index">
+                <ul class="list-inline year-list clearfix">
+                  <li ng-repeat="year in segement" ng-click="setYear(year)"> {{year}} </li>
+                </ul>
+              </div>
+            </div>
+            <button class="left carousel-control" type="button" ng-click="prev()">
+              <span class="arrow arrow-back">&lt;</span>
+            </button>
+            <button class="right carousel-control" type="button" ng-click="next()">
+              <span class="arrow arrow-next">&gt;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="three-cols has-select">
+    <div class="form-fields clearfix">
+      <div class="drop-down month-select" ng-class="{dropped:droppedMonth}">
+        <div ng-click="droppedMonth = !droppedMonth">
+          <div class="drop-value" ng-show="droppedMonth">
+            select
+          </div>
+          <div class="drop-value" ng-show="!droppedMonth">
+            {{ selectedMonth || 'mth...'}}
+          </div>
+          <i class="drop-arrow"></i>
+        </div>
+        <div class="drop-content">
+          <div class="month-picker">
+            <ul class="list-inline month-list clearfix">
+              <li ng-repeat="month in months" ng-click="setMonth(month)">{{month}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="three-cols has-select">
+    <div class="form-fields clearfix">
+
+      <div class="drop-down day-select" ng-class="{dropped:droppedDay}">
+        <div ng-click="droppedDay = !droppedDay">
+          <div class="drop-value" ng-show="droppedDay">
+            select
+          </div>
+          <div class="drop-value" ng-show="!droppedDay">
+            {{ selectedDay || 'day...'}}
+          </div>
+          <i class="drop-arrow"></i>
+        </div>
+
+        <div class="drop-content">
+          <div id="dayPicker" class="day-picker">
+            <ul class="list-inline month-list clearfix">
+              <li ng-repeat="day in days" ng-click="setDay(day)">{{day}}</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@
 
 <!-- custom directive radio title -->
 <div class="form-row clearfix">
-  <label for="gender" class="field-label"><span class="label-text">Select</span></label>
+  <label class="field-label"><span class="label-text">Select</span></label>
   <div class="form-fields clearfix">
     <radios options="secondOptions" ng-model="title">
     </radios>
@@ -26,5 +26,20 @@
   </div>
   <div>
     <button ng-click="doChange()"> change options</button>
+  </div>
+</div>
+
+
+<!-- custom directive radio gender -->
+<div class="form-row clearfix">
+  <div class="row myinfo-list">
+    <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+      <date-picker start-year="1990" decades="4" ng-model="DOB"></date-picker>
+    </form>
+  </div>
+
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> the date is : {{DOB | date}}.
   </div>
 </div>
