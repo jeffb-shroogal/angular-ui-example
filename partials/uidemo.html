@@ -30,7 +30,7 @@
 </div>
 
 
-<!-- custom directive radio gender -->
+<!-- custom directive date picker -->
 <div class="form-row clearfix">
   <div class="row myinfo-list">
     <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
@@ -41,5 +41,20 @@
   </div>
   <div class="alert alert-info">
     <strong>Info!</strong> the date is : {{DOB | date}}.
+  </div>
+</div>
+
+
+<!-- custom directive typed head select -->
+<div class="form-row clearfix">
+  <div class="row myinfo-list">
+    <form name="" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+      <custom-select ng-model="selected" place-holder="select ..." options="['Åland Islands','Albania','Algeria','American Samoa','Andorra','Angola','Anguilla','Antarctica','Antigua and Barbuda','Argentina','Armenia','Aruba','Australia','Austria','Azerbaijan','Bahamas','Bahrain']"></custom-select>
+    </form>
+  </div>
+
+  </div>
+  <div class="alert alert-info">
+    <strong>Info!</strong> no info.
   </div>
 </div>

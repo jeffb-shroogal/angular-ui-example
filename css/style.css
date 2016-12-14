@@ -16,6 +16,8 @@ input[type="radio"] {
   left: -999em;
   position: absolute;
 }
+
+/* ************************ radios button *********************       */
 .radio-btn {
 	float: left;
 	margin-right: -1px;
@@ -31,10 +33,61 @@ button.radio-btn:focus, button.radio-btn.active{
 	background: #00adee;
 	color: #FFF;
 }
-.year-picker {
+
+/* ************************ date picker *********************       */
+.year-picker{
 	width: 70px;
 	height: 40px;
 }
+
+
+/* ************************ select *********************       */
+.select{
+	position: relative;
+	width: 410px;
+	color: #00ADEE;
+}
+div.select-header{
+	position: relative;
+}
+.select-header input{
+	padding: 0 20px;
+	width: 90%;
+	height: 41px;
+	border: 1px solid #00ADEE;
+}
+.select-header button{
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	border: none;
+	background-color: #00ADEE;
+  background: url(../images/icons.png) no-repeat -459px -237px scroll #00ADEE;
+}
+.select-options{
+	position: absolute;
+	overflow-y: scroll;
+	width: 90%;
+	max-height: 250px;
+	z-index: 100;
+	border: 1px solid #00ADEE;
+	border-top: none;
+	background-color: #FFF;
+}
+.select-options ul{
+	padding: 0;
+	list-style: none;
+}
+
+.select-options ul li{
+	display: block;
+	padding: 3px 14px 3px 20px;
+}
+.select-options ul li:hover{
+	color: #FFF;
+	background-color: #00ADEE;
+}
+
 button.carousel-control {
 	border: none;
 	outline: none;

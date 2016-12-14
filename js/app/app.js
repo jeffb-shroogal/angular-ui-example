@@ -11,9 +11,10 @@ myApp.controller('uidemo', ['$scope', function($scope) {
   }
 
   //datePicker
-  $scope.DOB = new Date();
+  $scope.DOB = undefined;
 
 }]);
+
 
 
 myApp.directive('radios',[function(){
@@ -47,8 +48,6 @@ myApp.directive('radios',[function(){
     }
   }
 }]);
-
-
 
 myApp.directive('datePicker',[function(){
   return {
@@ -143,27 +142,64 @@ myApp.directive('datePicker',[function(){
 
     // ************************** formatters ************************
       ngModel.$formatters.push(function(date) {
-          console.log("formatters");
-          if(date != undefined) {
-            scope.selectedDay = date.getDate();
-            scope.selectedMonth = scope.months[date.getMonth()];
-            scope.selectedYear = date.getFullYear();
-          }
-          return date;
+        if(date != undefined) {
+          scope.selectedDay = date.getDate();
+          scope.selectedMonth = scope.months[date.getMonth()];
+          scope.selectedYear = date.getFullYear();
+        }
+        return date;
       });
 
 
     // ************************** parser ************************
     scope.$watch('selectedYear + selectedMonth + selectedDay', function() {
-          console.log("watch");
-          if(scope.selectedYear && scope.selectedMonth && scope.selectedDay) {
-            var tempDate =  scope.selectedDay + " " + scope.selectedMonth+ " " + scope.selectedYear;
-            console.log(tempDate);
-            console.log(new Date(tempDate));
-            ngModel.$setViewValue(new Date(tempDate));
-          }
+      if(scope.selectedYear && scope.selectedMonth && scope.selectedDay) {
+        var tempDate =  scope.selectedDay + " " + scope.selectedMonth+ " " + scope.selectedYear;
+        ngModel.$setViewValue(new Date(tempDate));
+      }
     });
 
+    }
+  }
+}]);
+
+myApp.directive('customSelect',[function(){
+  return {
+    require: '^ngModel',
+    replace: true,
+    scope:{
+      options: "=",
+      placeHolder: "@"
+    },
+    templateUrl:"partials/selectTemplate.html",
+    link: function(scope, element, attrs , ngModel){
+
+      //initialize variables
+      scope.showOption = false;
+      var tempOptions = scope.options;
+
+      //select event function
+      scope.selectOption = function(option){
+        console.log(option);
+        ngModel.$setViewValue(option);
+        scope.selectedOption = option;
+        scope.showOptions = false;
+      }
+
+      //filter the select options
+      scope.filterOptions = function(){
+        console.log("filter options");
+        if(scope.selectedOption != undefined || scope.selectedOption != '') {
+          var filteredOptions = [];
+          var kewywordRex = new RegExp(scope.selectedOption, 'i');
+          for (var i = 0; i < tempOptions.length; i++) {
+            if (kewywordRex.test(tempOptions[i])) {
+              filteredOptions.push(tempOptions[i]);
+            }
+          }
+          scope.options = filteredOptions;
+        }
+      }
     }
   }
 }]);

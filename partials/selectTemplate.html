@@ -1,0 +1,13 @@
+<div class="select">
+  <div class="select-header">
+    <input type="text" ng-model="selectedOption"  ng-change="filterOptions()" placeholder="{{placeHolder}}" ng-focus="showOptions = true" ng-blur="showOptions = false">
+    <button type="button"  ng-click="showOptions = !showOptions">
+      <i class="drop-arrow"></i>
+    </button>
+  </div>
+  <div class="select-options" ng-show="showOptions">
+    <ul>
+      <li ng-click="selectOption(option)" ng-repeat="option in options">{{option}}</li>
+    </ul>
+  </div>
+<div>

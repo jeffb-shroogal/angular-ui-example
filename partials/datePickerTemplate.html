@@ -15,8 +15,8 @@
         <div class="drop-content">
           <div class="carousel slide year-picker" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
-              <div class="item" ng-class="{active:indecator==index}"
-                    ng-repeat="segement in years" ng-init="indecator = $index">
+              <div class="item" ng-class="{active:indicator==index}"
+                    ng-repeat="segement in years" ng-init="indicator = $index">
                 <ul class="list-inline year-list clearfix">
                   <li ng-repeat="year in segement" ng-click="setYear(year)"> {{year}} </li>
                 </ul>
