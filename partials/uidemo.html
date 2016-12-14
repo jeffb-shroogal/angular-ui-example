@@ -52,16 +52,18 @@
 <div class="form-row clearfix">
   <div class="row myinfo-list">
     <form name="" enctype="multipart/form-data" method="" action="" class="myinfo-form">
-      <custom-select ng-model="selected" place-holder="select ..." options="selectOptions"></custom-select>
+      <div>
+        <custom-select ng-model="country" ng-change="updateStates()" place-holder="select ..." options="countries"></custom-select>
+      </div>
+      <div>
+        <custom-select ng-hide="! showState" ng-model="state" place-holder="select ..." options="states"></custom-select>
+      </div>
     </form>
   </div>
 
-  <div>
-    <button ng-click="changeSelectOptions()"> change options</button>
-  </div>
 
 </div>
 <div class="alert alert-info">
-  <strong>Info!</strong> selected: {{selected}}.
+  <strong>Info!</strong> selected: {{country}} {{state}}.
 </div>
 </div>

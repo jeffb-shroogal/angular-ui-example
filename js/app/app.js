@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
 
-myApp.controller('uidemo', ['$scope', function($scope) {
+myApp.controller('uidemo', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
   // radios
   $scope.gender = 'female';
@@ -13,13 +13,50 @@ myApp.controller('uidemo', ['$scope', function($scope) {
   //datePicker
   $scope.DOB = undefined;
 
-  $scope.selectOptions = ['Åland Islands', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain']
+  $scope.countries = [];
+  $scope.states = [];
+  $scope.country = 'Australia';
+  $scope.state = 'Victoria';
+  $scope.showState = false;
 
-  $scope.changeSelectOptions = function() {
-    console.log( 'changing options!');
-    $scope.selectOptions = ['test', 'test2'];
-  };
+  $scope.updateStates = function() {
+    $scope.states = [];
+    // Find the correct filename from countriesData json
+    angular.forEach($scope.countriesData, function(countryInfo) {
+      if (countryInfo.name == $scope.country) {
+        if (countryInfo.filename) {
+          $http.get('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries/' + countryInfo.filename + '.json').then(function(response) {
+            $scope.statesData = response.data;
+            angular.forEach($scope.statesData, function(state) {
+              $scope.states.push(state.name);
+            });
+            $scope.showState = true;
+          }, function() {
+            // Http Error Handling Here
+          });
+        } else {
+          // No states to display
+          $scope.showState = false;
+        }
+      }
+    });
+  }
 
+  // Load the Countries
+  $http.get('https://raw.githubusercontent.com/astockwell/countries-and-provinces-states-regions/master/countries.json').then(function(response) {
+    // Store the JSON for later
+    $scope.countriesData = response.data;
+    // Clear the array of countries
+    $scope.countries = [];
+    angular.forEach($scope.countriesData, function(country) {
+      // Add the name of the country
+      $scope.countries.push(country.name);
+    });
+    // Update the states select
+    $scope.updateStates();
+  }, function() {
+    // Http Error Handling Here
+  });
 }]);
 
 
@@ -195,16 +232,15 @@ myApp.directive('customSelect', [function() {
 
       //select event function
       scope.selectOption = function(option) {
-        console.log(option);
         ngModel.$setViewValue(option);
         scope.selectedOption = option;
         scope.showOptions = false;
       }
 
-      scope.hideOptions = function(){
-        $timeout(function(){
-          scope.showOptionsm= false
-        }, 200)
+      scope.hideOptions = function() {
+        $timeout(function() {
+          scope.showOptions = false
+        });
       }
 
       //filter the select options
