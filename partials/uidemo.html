@@ -3,7 +3,9 @@
 
 <!-- custom directive radio gender -->
 <div class="form-row clearfix">
-  <label for="gender" class="field-label"><span class="label-text">Select</span></label>
+  <label for="gender" class="field-label">
+    <span class="label-text">Select</span>
+  </label>
   <div class="form-fields clearfix">
     <radios options="['male','female','other']" ng-model="gender">
     </radios>
@@ -15,14 +17,15 @@
 
 <!-- custom directive radio title -->
 <div class="form-row clearfix">
-  <label class="field-label"><span class="label-text">Select</span></label>
+  <label class="field-label">
+    <span class="label-text">Select</span>
+  </label>
   <div class="form-fields clearfix">
     <radios options="secondOptions" ng-model="title">
     </radios>
   </div>
   <div class="alert alert-info">
-    <strong>Info!</strong> title is not initialized and take the first option by default
-    scope variable gender : {{title}}
+    <strong>Info!</strong> title is not initialized and take the first option by default scope variable gender : {{title}}
   </div>
   <div>
     <button ng-click="doChange()"> change options</button>
@@ -38,10 +41,10 @@
     </form>
   </div>
 
-  </div>
-  <div class="alert alert-info">
-    <strong>Info!</strong> the date is : {{DOB | date}}.
-  </div>
+</div>
+<div class="alert alert-info">
+  <strong>Info!</strong> the date is : {{DOB | date}}.
+</div>
 </div>
 
 
@@ -49,12 +52,16 @@
 <div class="form-row clearfix">
   <div class="row myinfo-list">
     <form name="" enctype="multipart/form-data" method="" action="" class="myinfo-form">
-      <custom-select ng-model="selected" place-holder="select ..." options="['Åland Islands','Albania','Algeria','American Samoa','Andorra','Angola','Anguilla','Antarctica','Antigua and Barbuda','Argentina','Armenia','Aruba','Australia','Austria','Azerbaijan','Bahamas','Bahrain']"></custom-select>
+      <custom-select ng-model="selected" place-holder="select ..." options="selectOptions"></custom-select>
     </form>
   </div>
 
+  <div>
+    <button ng-click="changeSelectOptions()"> change options</button>
   </div>
-  <div class="alert alert-info">
-    <strong>Info!</strong> no info.
-  </div>
+
+</div>
+<div class="alert alert-info">
+  <strong>Info!</strong> selected: {{selected}}.
+</div>
 </div>
