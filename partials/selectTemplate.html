@@ -7,7 +7,9 @@
   </div>
   <div class="select-options" ng-show="showOptions">
     <ul>
-      <li ng-click="selectOption(option)" ng-repeat="option in options">{{option}}</li>
+      <li ng-repeat="option in options">
+        <a ng-click="selectOption(option)">{{option}}</a>
+      </li>
     </ul>
   </div>
 <div>
