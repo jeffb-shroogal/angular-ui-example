@@ -1,13 +1,13 @@
 <div class="select form-row">
   <div class="select-header">
     <input type="text" ng-model="selectedOption"  ng-change="filterOptions()" placeholder="{{placeHolder}}" ng-focus="showOptions = true" ng-blur="hideOptions()"/>
-    <button type="button"  ng-click="showOptions = !showOptions">
+    <button type="button"  ng-click="toggleOptionsFn()">
       <i class="drop-arrow"></i>
     </button>
   </div>
   <div class="select-options" ng-show="showOptions">
     <ul>
-      <li ng-repeat="option in options">
+      <li ng-repeat="option in filteredOptions">
         <a ng-click="selectOption(option)">{{option}}</a>
       </li>
     </ul>

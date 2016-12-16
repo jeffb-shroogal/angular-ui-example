@@ -215,7 +215,7 @@ myApp.directive('datePicker', [function() {
   }
 }]);
 
-myApp.directive('customSelect', [function() {
+myApp.directive('customSelect', ['$timeout',function($timeout) {
   return {
     require: '^ngModel',
     replace: true,
@@ -228,7 +228,7 @@ myApp.directive('customSelect', [function() {
 
       //initialize variables
       scope.showOption = false;
-      var tempOptions = scope.options;
+      scope.filteredOptions = [];
 
       //select event function
       scope.selectOption = function(option) {
@@ -237,25 +237,55 @@ myApp.directive('customSelect', [function() {
         scope.showOptions = false;
       }
 
+      //hide options
+      scope.toggleOptionsFn = function() {
+        //toggle the option list
+        scope.showOptions = !scope.showOptions;
+        //set focus to the input tage
+        var input = undefined;
+        if (scope.showOptions) {
+          try {
+            input = element[0].children[0].children[0];
+            if(input.tagName == "INPUT") {
+              input.focus();
+            }
+          } catch (ex) {
+            console.log("can't access the input element in the custom select");
+          }
+        }
+      }
+
+      //hide options
       scope.hideOptions = function() {
         $timeout(function() {
           scope.showOptions = false
-        });
+        },100);
       }
 
       //filter the select options
       scope.filterOptions = function() {
         if (scope.selectedOption != undefined || scope.selectedOption != '') {
-          var filteredOptions = [];
+          scope.filteredOptions = [];
           var kewywordRex = new RegExp(scope.selectedOption, 'i');
-          for (var i = 0; i < tempOptions.length; i++) {
-            if (kewywordRex.test(tempOptions[i])) {
-              filteredOptions.push(tempOptions[i]);
+          for (var i = 0; i < scope.options.length; i++) {
+            if (kewywordRex.test(scope.options[i])) {
+              scope.filteredOptions.push(scope.options[i]);
             }
           }
-          scope.options = filteredOptions;
         }
       }
+
+      // ************************** formatters ************************
+      ngModel.$formatters.push(function(option) {
+        scope.selectOption(option);
+        return option;
+      });
+
+      // ************************* watch options **********************
+      scope.$watch('options', function(){
+        scope.filteredOptions = scope.options;
+      })
+
     }
   }
 }]);

@@ -1692,7 +1692,7 @@ div.select-header{
 .select-options{
 	position: absolute;
 	overflow-y: scroll;
-	width: 90%;
+	width: 74%;
 	max-height: 250px;
 	z-index: 100;
 	border: 1px solid #00ADEE;
