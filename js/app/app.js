@@ -10,7 +10,7 @@ myApp.controller('uidemo', ['$scope', '$http', '$timeout', function($scope, $htt
     $scope.secondOptions = ['Yes', 'No'];
   }
 
-  //datePicker
+  //sdatePicker
   $scope.DOB = undefined;
 
   $scope.countries = [];
@@ -31,6 +31,9 @@ myApp.controller('uidemo', ['$scope', '$http', '$timeout', function($scope, $htt
               $scope.states.push(state.name);
             });
             $scope.showState = true;
+            if($scope.states.indexOf($scope.state) == -1){
+              $scope.state = $scope.states[0];
+            }
           }, function() {
             // Http Error Handling Here
           });
@@ -53,6 +56,7 @@ myApp.controller('uidemo', ['$scope', '$http', '$timeout', function($scope, $htt
       $scope.countries.push(country.name);
     });
     // Update the states select
+
     $scope.updateStates();
   }, function() {
     // Http Error Handling Here
@@ -77,20 +81,17 @@ myApp.directive('radios', [function() {
         //handel the check
         scope.check = function(option) {
           ngModel.$setViewValue(option);
-          ngModel.$modelValue = option
           scope.checked = option;
         }
 
-        ngModel.$formatters.push(function(value) {
-          if (value != undefined) {
-            scope.check(value);
-          }
-          return value;
-        });
+        ngModel.$render = function() {
+          scope.check(ngModel.$viewValue);
+        }
       }
     }
   }
 }]);
+
 
 myApp.directive('datePicker', [function() {
   return {
@@ -215,6 +216,14 @@ myApp.directive('datePicker', [function() {
   }
 }]);
 
+
+
+
+
+
+
+
+
 myApp.directive('customSelect', ['$timeout',function($timeout) {
   return {
     require: '^ngModel',
@@ -227,25 +236,28 @@ myApp.directive('customSelect', ['$timeout',function($timeout) {
     link: function(scope, element, attrs, ngModel) {
 
       //initialize variables
+      var input = undefined;
       scope.showOption = false;
       scope.filteredOptions = [];
 
-      //select event function
-      scope.selectOption = function(option) {
+      scope.selectOptionFn = function(option) {
+        //select event function
         ngModel.$setViewValue(option);
         scope.selectedOption = option;
-        scope.showOptions = false;
       }
+
 
       //hide options
       scope.toggleOptionsFn = function() {
         //toggle the option list
         scope.showOptions = !scope.showOptions;
         //set focus to the input tage
-        var input = undefined;
+
         if (scope.showOptions) {
           try {
-            input = element[0].children[0].children[0];
+            if(input == undefined) {
+                input = element[0].children[0].children[0];
+            }
             if(input.tagName == "INPUT") {
               input.focus();
             }
@@ -256,14 +268,15 @@ myApp.directive('customSelect', ['$timeout',function($timeout) {
       }
 
       //hide options
-      scope.hideOptions = function() {
+      scope.hideOptionsFn = function() {
         $timeout(function() {
           scope.showOptions = false
         },100);
       }
 
+
       //filter the select options
-      scope.filterOptions = function() {
+      scope.filterOptionsFn = function() {
         if (scope.selectedOption != undefined || scope.selectedOption != '') {
           scope.filteredOptions = [];
           var kewywordRex = new RegExp(scope.selectedOption, 'i');
@@ -275,11 +288,12 @@ myApp.directive('customSelect', ['$timeout',function($timeout) {
         }
       }
 
-      // ************************** formatters ************************
-      ngModel.$formatters.push(function(option) {
-        scope.selectOption(option);
-        return option;
-      });
+
+      // ************************** render ************************
+      ngModel.$render = function() {
+        scope.selectedOption = ngModel.$viewValue;
+      }
+
 
       // ************************* watch options **********************
       scope.$watch('options', function(){

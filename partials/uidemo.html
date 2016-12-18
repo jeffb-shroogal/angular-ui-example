@@ -1,69 +1,68 @@
-<p>Please put the components in this HTML page</p>
-<p> ver 1.0.0.0</p>
+<div ng-controller="uidemo">
+  <p>Please put the components in this HTML page</p>
+  <p> ver 1.0.0.0</p>
 
-<!-- custom directive radio gender -->
-<div class="form-row clearfix">
-  <label for="gender" class="field-label">
-    <span class="label-text">Select</span>
-  </label>
-  <div class="form-fields clearfix">
-    <radios options="['male','female','other']" ng-model="gender">
-    </radios>
+  <!-- custom directive radio gender -->
+  <div class="form-row clearfix">
+    <label for="gender" class="field-label">
+      <span class="label-text">Select</span>
+    </label>
+    <div class="form-fields clearfix">
+      <radios options="['male','female','other']" ng-model="gender">
+      </radios>
+    </div>
+    <div class="alert alert-info">
+      <strong>Info!</strong> gender is initialized as female , scope variable gender : {{gender}}
+    </div>
   </div>
+
+  <!-- custom directive radio title -->
+  <div class="form-row clearfix">
+    <label class="field-label">
+      <span class="label-text">Select</span>
+    </label>
+    <div class="form-fields clearfix">
+      <radios options="secondOptions" ng-model="title">
+      </radios>
+    </div>
+    <div class="alert alert-info">
+      <strong>Info!</strong> title is not initialized and take the first option by default scope variable gender : {{title}}
+    </div>
+    <div>
+      <button ng-click="doChange()"> change options</button>
+    </div>
+  </div>
+
+
+  <!-- custom directive date picker -->
+  <div class="form-row clearfix">
+    <div class="row myinfo-list">
+      <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+        <date-picker start-year="1990" decades="4" ng-model="DOB"></date-picker>
+      </form>
+    </div>
+  </div>
+
   <div class="alert alert-info">
-    <strong>Info!</strong> gender is initialized as female , scope variable gender : {{gender}}
+    <strong>Info!</strong> the date is : {{DOB | date}}.
   </div>
-</div>
 
-<!-- custom directive radio title -->
-<div class="form-row clearfix">
-  <label class="field-label">
-    <span class="label-text">Select</span>
-  </label>
-  <div class="form-fields clearfix">
-    <radios options="secondOptions" ng-model="title">
-    </radios>
+
+  <!-- custom directive typed head select -->
+  <div class="form-row clearfix">
+    <div class="row myinfo-list">
+      <form name="" enctype="multipart/form-data" method="" action="" class="myinfo-form">
+        <div>
+          <custom-select ng-model="country" ng-change="updateStates()" place-holder="select ..." options="countries"></custom-select>
+        </div>
+        <div>
+          <custom-select ng-model="state"  ng-chnange="updateStates()" place-holder="select ..." options="states"></custom-select>
+        </div>
+      </form>
+    </div>
   </div>
+
   <div class="alert alert-info">
-    <strong>Info!</strong> title is not initialized and take the first option by default scope variable gender : {{title}}
+    <strong>Info!</strong> selected: {{country}} {{state}}.
   </div>
-  <div>
-    <button ng-click="doChange()"> change options</button>
-  </div>
-</div>
-
-
-<!-- custom directive date picker -->
-<div class="form-row clearfix">
-  <div class="row myinfo-list">
-    <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
-      <date-picker start-year="1990" decades="4" ng-model="DOB"></date-picker>
-    </form>
-  </div>
-
-</div>
-<div class="alert alert-info">
-  <strong>Info!</strong> the date is : {{DOB | date}}.
-</div>
-</div>
-
-
-<!-- custom directive typed head select -->
-<div class="form-row clearfix">
-  <div class="row myinfo-list">
-    <form name="" enctype="multipart/form-data" method="" action="" class="myinfo-form">
-      <div>
-        <custom-select ng-model="country" ng-change="updateStates()" place-holder="select ..." options="countries"></custom-select>
-      </div>
-      <div>
-        <custom-select ng-hide="! showState" ng-model="state" place-holder="select ..." options="states"></custom-select>
-      </div>
-    </form>
-  </div>
-
-
-</div>
-<div class="alert alert-info">
-  <strong>Info!</strong> selected: {{country}} {{state}}.
-</div>
 </div>
