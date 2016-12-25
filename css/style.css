@@ -296,10 +296,12 @@ a:focus {
 .section-heading .arrow-next,
 .widget .arrow-next,
 .continue .arrow-next,
+/*
 .year-picker .arrow-next {
 	background-position: -253px 0;
 	margin-left: 12px;
 }
+*/
 .section-hint {
 	color: #a7a9ac;
 	font-size: 13px;
@@ -1511,6 +1513,7 @@ a.ui-button:active,
 .drop-down.dropped .drop-content {
 	display: block;
 }
+/*
 .year-picker,
 .month-picker,
 .day-picker {
@@ -1597,6 +1600,7 @@ a.ui-button:active,
 	top: -20px;
 	left: 243px;
 }
+*/
 .month-picker {
 	width: 602px;
 }
@@ -1642,6 +1646,22 @@ a.ui-button:active,
 /*}*/
 
 
+
+
+
+
+/* ************************* arrows ****************************      */
+.drop-arrow{
+	background: url(../images/icons.png) no-repeat -459px -237px scroll #00ADEE;
+}
+
+.back-arrow{
+	background: url(../images/icons.png) no-repeat -238px -238px scroll #00ADEE;
+}
+.next-arrow{
+	background: url(../images/icons.png) no-repeat -310px -238px scroll #00ADEE;
+}
+
 /* ************************ radios button *********************       */
 .radio-btn {
 	float: left;
@@ -1660,16 +1680,125 @@ button.radio-btn:focus, button.radio-btn.active{
 }
 
 /* ************************ date picker *********************       */
-.year-picker{
+.date-picker{
+	position: relative;
+	float: left;
+	margin: 2px 16px;
+}
+
+.date-picker-header{
+	height: 40px;
+}
+
+.date-picker input{
+	float: left;
 	width: 70px;
 	height: 40px;
+	color: #00ADEE;
+	border: 1px solid #00ADEE;
+	text-align: center;
+}
+
+.date-picker button{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	font-size: 1.4em;
+	line-height: 40px;
+	color: #FFF;
+	border: none;
+	background: #00ADEE;
+}
+
+.date-picker button.disabled{
+	background: #DDD;
+	cursor: not-allowed;
+}
+
+.date-picker input:focus, .date-picker button:focus{
+	outline: none;
+}
+
+.date-picker-spacer{
+	position: absolute;
+	top: 39px;
+	height: 12px;
+	width: 70px;
+	border-left: 1px solid #00ADEE;
+	border-right: 1px solid #00ADEE;
+	background: #FFF;
+	z-index: 1000;
+}
+
+.date-picker-content{
+	overflow: hidden;
+	position: absolute;
+	top: 50px;
+	border: 1px solid #00ADEE;
+	z-index: 100;
+}
+
+.date-picker ul, .date-picker ul li, .date-picker ul li a{
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+}
+
+.date-picker ul li a{
+	margin: 1px;
+	padding: 0;
+	width: 48px;
+	height: 38px;
+	color: #00ADEE;
+	background: #FFF;
+	text-align: center;
+}
+
+.date-picker ul li a:hover{
+	color: #FFF;
+	background: #00ADEE;
+	cursor: pointer;
+}
+
+
+/***********************  year picker **************************/
+.year-picker-content{
+	left: -140px;
+	width: 342px;
+	z-index: 100;
+}
+
+.year-picker-content ul li a{
+	width: 50px;
+}
+
+/***********************  month picker **************************/
+.month-picker-content{
+	left: -143px;
+	width: 530px;
+	z-index: 110;
+}
+
+.month-picker-content ul li a{
+	width: 42px;
+}
+
+
+/***********************  day picker **************************/
+.day-picker-content{
+	left: 0;
+	width: 402px;
+	z-index: 120;
 }
 
 
 /* ************************ select *********************       */
 .select{
 	position: relative;
-	width: 410px;
+	width: 400px;
 	color: #00ADEE;
 }
 div.select-header{
@@ -1677,7 +1806,6 @@ div.select-header{
 }
 .select-header input{
 	padding: 0 20px;
-	width: 90%;
 	height: 41px;
 	border: 1px solid #00ADEE;
 }
@@ -1692,7 +1820,6 @@ div.select-header{
 .select-options{
 	position: absolute;
 	overflow-y: scroll;
-	width: 74%;
 	max-height: 250px;
 	z-index: 100;
 	border: 1px solid #00ADEE;
@@ -1712,4 +1839,7 @@ div.select-header{
 .select-options ul li a:hover{
 	color: #FFF;
 	background-color: #00ADEE;
+}
+.select-header input:focus, .select-header button:focus{
+	outline: none;
 }

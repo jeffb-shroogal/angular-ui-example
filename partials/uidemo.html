@@ -38,7 +38,9 @@
   <div class="form-row clearfix">
     <div class="row myinfo-list">
       <form name="" id="dateOfBirth" enctype="multipart/form-data" method="" action="" class="myinfo-form">
-        <date-picker start-year="1990" decades="4" ng-model="DOB"></date-picker>
+        <div class="form-row clearfix">
+          <date-picker start-year="1990" end-year="2020" ng-model="DOB"></date-picker>
+        </div>
       </form>
     </div>
   </div>
